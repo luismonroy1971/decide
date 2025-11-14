@@ -68,6 +68,25 @@ const Icon: React.FC<IconProps> = ({ name, className = 'w-6 h-6' }) => {
     Sparkles: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={className}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM18 13.5a3.375 3.375 0 00-3.375-3.375L13.5 9.75l-1.125.375a3.375 3.375 0 00-2.456 2.456L9.75 13.5l.375 1.125a3.375 3.375 0 002.456 2.456L13.5 18l1.125-.375a3.375 3.375 0 002.456-2.456L18 13.5z"/></svg>
     ),
+    Facebook: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className} fill="currentColor">
+        <path d="M14.5 7H12.8c-1.3 0-2.3 1-2.3 2.3V11H9v2h1.5v6h2.3v-6h2l.5-2h-2.5V9.4c0-.22.18-.4.4-.4h1.8V7z" />
+      </svg>
+    ),
+    Instagram: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="4" y="4" width="16" height="16" rx="4" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17" cy="7" r="1.25" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+    LinkedIn: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={className} fill="currentColor">
+        <circle cx="7.25" cy="6.75" r="1.25" />
+        <rect x="6" y="9" width="2.5" height="8" />
+        <path d="M11 9h2.2c1.9 0 3.3 1.3 3.3 3.4V17h-2.2v-3.1c0-.9-.5-1.6-1.5-1.6H13V17h-2V9z" />
+      </svg>
+    ),
   };
 
   return icons[name] || <div />;

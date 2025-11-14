@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { View } from '../types';
+import Icon from './Icon';
 
 interface FooterProps {
     onNavigate: (view: View, anchor?: string) => void;
@@ -45,9 +46,15 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Síguenos</h4>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-brand-accent-500 transition-colors">Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-brand-accent-500 transition-colors">Instagram</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-brand-accent-500 transition-colors">LinkedIn</a>
+              <a href="https://www.facebook.com/decideinmobiliaria.pe" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-slate-300 hover:text-brand-accent-500 transition-colors">
+                <Icon name="Facebook" className="w-6 h-6" />
+              </a>
+              <a href="https://www.instagram.com/decideinmobiliaria.pe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-300 hover:text-brand-accent-500 transition-colors">
+                <Icon name="Instagram" className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/decide-mkt-97837332a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-300 hover:text-brand-accent-500 transition-colors">
+                <Icon name="LinkedIn" className="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
