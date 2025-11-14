@@ -8,12 +8,9 @@
     "longDescription": "Residencial Solaris redefine la vida urbana con su diseño vanguardista y ubicación privilegiada en el corazón de Miraflores. Cada departamento ha sido meticulosamente diseñado para maximizar el espacio y la luz natural, ofreciendo una experiencia de vida inigualable. Disfruta de nuestras áreas comunes que incluyen piscina, gimnasio y zona de coworking.",
     "benefits": ["Piscina con vista panorámica", "Gimnasio completamente equipado", "Área de Coworking", "Lobby de doble altura", "Seguridad 24/7"],
     "gallery": [
-      "https://picsum.photos/seed/solaris1/1200/800",
-      "https://picsum.photos/seed/solaris2/1200/800",
-      "https://picsum.photos/seed/solaris3/1200/800",
-      "https://picsum.photos/seed/solaris4/1200/800"
+      "/images/carrusel/residencial%20solaris.png"
     ],
-    "mainImage": "https://picsum.photos/seed/solaris-main/800/600"
+    "mainImage": "/images/carrusel/residencial%20solaris.png"
   },
   {
     "id": "proyecto-arboleda",
@@ -24,11 +21,9 @@
     "longDescription": "Condominio La Arboleda es un oasis en medio de la ciudad. Diseñado para familias que buscan tranquilidad y contacto con la naturaleza sin sacrificar las comodidades de la vida moderna. Nuestros departamentos cuentan con amplias terrazas y acceso a más de 2,000 m² de áreas verdes, juegos para niños y una casa club.",
     "benefits": ["Amplias áreas verdes", "Casa Club con SUM", "Juegos para niños", "Canchas deportivas", "Cercanía a colegios y centros comerciales"],
     "gallery": [
-      "https://picsum.photos/seed/arboleda1/1200/800",
-      "https://picsum.photos/seed/arboleda2/1200/800",
-      "https://picsum.photos/seed/arboleda3/1200/800"
+      "/images/carrusel/condominio%20la%20arboleda.png"
     ],
-    "mainImage": "https://picsum.photos/seed/arboleda-main/800/600"
+    "mainImage": "/images/carrusel/condominio%20la%20arboleda.png"
   },
   {
     "id": "proyecto-orquideas",
@@ -39,9 +34,8 @@
     "longDescription": "Las Orquídeas ofrece un estilo de vida sofisticado y exclusivo en San Isidro. Con solo 20 departamentos, garantizamos privacidad y un ambiente selecto. Los acabados son de primera calidad, con mármol en baños y cocinas, y pisos de madera estructurada. La ubicación es inmejorable, cerca a parques, restaurantes y el centro financiero.",
     "benefits": ["Ubicación premium", "Acabados de lujo", "Pocas unidades para mayor privacidad", "Tecnología Smart Home", "Estacionamiento para visitas"],
     "gallery": [
-      "https://picsum.photos/seed/orquideas1/1200/800",
-      "https://picsum.photos/seed/orquideas2/1200/800"
+      "/images/carrusel/condominio%20las%20orquideas.png"
     ],
-    "mainImage": "https://picsum.photos/seed/orquideas-main/800/600"
+    "mainImage": "/images/carrusel/condominio%20las%20orquideas.png"
   }
 ]

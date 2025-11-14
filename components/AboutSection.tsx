@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img src="https://picsum.photos/seed/about-us/800/600" alt="Nuestro Equipo" className="rounded-lg shadow-2xl"/>
+            <img src="/images/nosotros.png" alt="Nuestro Equipo" className="rounded-lg shadow-2xl"/>
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-brand-blue-900 mb-6">Quiénes Somos</h2>
