@@ -1,5 +1,5 @@
 
-import { Project, Advisor, Benefit, BlogPost, User, LegalContent, AdminUser, AdminNotification } from '../types';
+import { Project, Advisor, Benefit, BlogPost, User, LegalContent, AdminUser, AdminNotification, SiteSettings } from '../types';
 
 const fetchJson = async <T>(url: string): Promise<T> => {
     const response = await fetch(url);
@@ -34,6 +34,7 @@ export const getBlogPosts = (): Promise<BlogPost[]> => getOrFetch<BlogPost[]>('/
 export const getLegalContent = (): Promise<LegalContent> => getOrFetch<LegalContent>('/api/legal.json');
 export const getAdminUsers = (): Promise<AdminUser[]> => getOrFetch<AdminUser[]>('/api/admin_users.json');
 export const getAdminNotifications = (): Promise<AdminNotification[]> => getOrFetch<AdminNotification[]>('/api/admin_notifications.json');
+export const getSiteSettings = (): Promise<SiteSettings> => getOrFetch<SiteSettings>('/api/settings.json');
 
 
 export const loginUser = async (email: string, pass: string): Promise<User | null> => {

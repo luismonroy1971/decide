@@ -4,7 +4,7 @@ import * as api from '../../services/apiService';
 import { Project, Advisor, Benefit, BlogPost, LegalContent } from '../../types';
 import Icon from '../Icon';
 
-type SectionKey = 'projects' | 'advisors' | 'benefits' | 'blogPosts' | 'legal';
+type SectionKey = 'projects' | 'advisors' | 'benefits' | 'blogPosts' | 'legal' | 'whatsapp';
 
 const AdminSettings: React.FC = () => {
   const [activeTab, setActiveTab] = useState<SectionKey>('projects');
@@ -13,22 +13,27 @@ const AdminSettings: React.FC = () => {
   const [benefits, setBenefits] = useState<Benefit[]>([]);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [legal, setLegal] = useState<LegalContent | null>(null);
+  const [whatsappPhone, setWhatsappPhone] = useState('');
+  const [whatsappMessage, setWhatsappMessage] = useState('');
   const [statusMsg, setStatusMsg] = useState<string | null>(null);
 
   useEffect(() => {
     const loadAll = async () => {
-      const [p, a, b, bp, l] = await Promise.all([
+      const [p, a, b, bp, l, s] = await Promise.all([
         api.getProjects(),
         api.getAdvisors(),
         api.getBenefits(),
         api.getBlogPosts(),
-        api.getLegalContent()
+        api.getLegalContent(),
+        api.getSiteSettings()
       ]);
       setProjects(p);
       setAdvisors(a);
       setBenefits(b);
       setBlogPosts(bp);
       setLegal(l);
+      setWhatsappPhone(s.whatsapp.phoneInternational);
+      setWhatsappMessage(s.whatsapp.defaultMessage);
     };
     loadAll();
   }, []);
@@ -40,6 +45,7 @@ const AdminSettings: React.FC = () => {
       benefits,
       blogPosts,
       legal: legal as LegalContent,
+      whatsapp: { whatsapp: { phoneInternational: whatsappPhone, defaultMessage: whatsappMessage } },
     };
     const urlMap: Record<SectionKey, string> = {
       projects: '/api/projects.json',
@@ -47,6 +53,7 @@ const AdminSettings: React.FC = () => {
       benefits: '/api/benefits.json',
       blogPosts: '/api/blogPosts.json',
       legal: '/api/legal.json',
+      whatsapp: '/api/settings.json',
     };
     window.localStorage.setItem(`cms:${urlMap[key]}`, JSON.stringify(map[key]));
     setStatusMsg('Cambios guardados (borrador local). Ver Página Principal para previsualizar.');
@@ -59,6 +66,7 @@ const AdminSettings: React.FC = () => {
       benefits: '/api/benefits.json',
       blogPosts: '/api/blogPosts.json',
       legal: '/api/legal.json',
+      whatsapp: '/api/settings.json',
     };
     window.localStorage.removeItem(`cms:${urlMap[key]}`);
     setStatusMsg('Borrador eliminado. Usando datos originales.');
@@ -71,6 +79,7 @@ const AdminSettings: React.FC = () => {
       benefits: { filename: 'benefits.json', content: JSON.stringify(benefits, null, 2) },
       blogPosts: { filename: 'blogPosts.json', content: JSON.stringify(blogPosts, null, 2) },
       legal: { filename: 'legal.json', content: JSON.stringify(legal, null, 2) },
+      whatsapp: { filename: 'settings.json', content: JSON.stringify({ whatsapp: { phoneInternational: whatsappPhone, defaultMessage: whatsappMessage } }, null, 2) },
     };
     const { filename, content } = map[key];
     const blob = new Blob([content], { type: 'application/json' });
@@ -114,6 +123,7 @@ const AdminSettings: React.FC = () => {
           <TabButton tab="benefits" label="Beneficios" />
           <TabButton tab="blogPosts" label="Blog" />
           <TabButton tab="legal" label="Legal" />
+          <TabButton tab="whatsapp" label="WhatsApp" />
         </div>
 
         {statusMsg && (
@@ -268,6 +278,23 @@ const AdminSettings: React.FC = () => {
               </div>
             </div>
             <ActionBar onSave={() => save('legal')} onDownload={() => download('legal')} onReset={() => reset('legal')} />
+          </div>
+        )}
+
+        {activeTab === 'whatsapp' && (
+          <div>
+            <h2 className="text-xl font-semibold text-brand-blue-800 mb-3">Botón de WhatsApp</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm text-slate-600">Número (internacional, sin +)</label>
+                <input className="mt-1 w-full p-2 border rounded" value={whatsappPhone} onChange={e => setWhatsappPhone(e.target.value)} placeholder="51987654321" />
+              </div>
+              <div className="md:col-span-2">
+                <label className="text-sm text-slate-600">Mensaje por defecto</label>
+                <input className="mt-1 w-full p-2 border rounded" value={whatsappMessage} onChange={e => setWhatsappMessage(e.target.value)} placeholder="Hola, estoy interesado en..." />
+              </div>
+            </div>
+            <ActionBar onSave={() => save('whatsapp')} onDownload={() => download('whatsapp')} onReset={() => reset('whatsapp')} />
           </div>
         )}
 

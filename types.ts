@@ -85,3 +85,10 @@ export interface AdminNotification {
   date: string;
   isRead: boolean;
 }
+
+export interface SiteSettings {
+  whatsapp: {
+    phoneInternational: string;
+    defaultMessage: string;
+  };
+}

@@ -8,9 +8,10 @@ interface HeaderProps {
     isLoggedIn: boolean;
     onLogout: () => void;
     currentView: View;
+    whatsappLink?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ onNavigate, isLoggedIn, onLogout, currentView }) => {
+const Header: React.FC<HeaderProps> = ({ onNavigate, isLoggedIn, onLogout, currentView, whatsappLink }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -63,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, isLoggedIn, onLogout, curre
                                 </div>
                             </div>
                             <div className="hidden md:flex items-center space-x-4">
-                                <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
+                                <a href={whatsappLink || 'https://wa.me/51987654321'} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
                                     <Icon name="WhatsApp" className="w-5 h-5"/>
                                     <span>Escríbenos</span>
                                 </a>
@@ -107,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, isLoggedIn, onLogout, curre
                             </div>
                             <div className="pt-4 pb-3 border-t border-slate-200">
                                 <div className="flex items-center px-5">
-                                    <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
+                                    <a href={whatsappLink || 'https://wa.me/51987654321'} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
                                         <Icon name="WhatsApp" className="w-5 h-5"/>
                                         <span>Escríbenos al WhatsApp</span>
                                     </a>

@@ -1,6 +1,6 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
-import { Project, View, BlogPost, User, Advisor, Benefit, LegalContent, AdminUser, AdminNotification } from './types';
+import { Project, View, BlogPost, User, Advisor, Benefit, LegalContent, AdminUser, AdminNotification, SiteSettings } from './types';
 import * as apiService from './services/apiService';
 
 import Header from './components/Header';
@@ -36,6 +36,7 @@ const App: React.FC = () => {
     const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
     const [legalData, setLegalData] = useState<LegalContent | null>(null);
     
+    const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(null);
     // Admin data states
     const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
     const [adminNotifications, setAdminNotifications] = useState<AdminNotification[]>([]);
@@ -52,6 +53,7 @@ const App: React.FC = () => {
             // Load admin data as well
             setAdminUsers(await apiService.getAdminUsers());
             setAdminNotifications(await apiService.getAdminNotifications());
+            setSiteSettings(await apiService.getSiteSettings());
         };
         loadData();
     }, []);
@@ -197,7 +199,7 @@ const App: React.FC = () => {
 
     return (
         <div className="font-sans">
-            {showMainLayout && <Header onNavigate={handleNavigate} isLoggedIn={isLoggedIn} onLogout={handleLogout} currentView={currentView} />}
+            {showMainLayout && <Header onNavigate={handleNavigate} isLoggedIn={isLoggedIn} onLogout={handleLogout} currentView={currentView} whatsappLink={siteSettings ? `https://wa.me/${siteSettings.whatsapp.phoneInternational}?text=${encodeURIComponent(siteSettings.whatsapp.defaultMessage)}` : 'https://wa.me/51987654321'} />}
             {renderContent()}
             {showFooter && <Footer onNavigate={handleNavigate} />}
         </div>
