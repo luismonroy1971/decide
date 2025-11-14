@@ -1,0 +1,24 @@
+
+[
+    { 
+        "id": "1", 
+        "title": "Tu depa paso a paso", 
+        "summary": "Te explicamos de manera clara todo el proceso, desde el contacto inicial hasta la entrega de llaves.", 
+        "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+        "content": "<h3>El Inicio del Sueño</h3><p>Todo comienza con una idea, un anhelo de tener un espacio propio. El primer paso es definir qué buscas: ¿un lugar céntrico y vibrante o un refugio tranquilo en las afueras? ¿Cuántas habitaciones necesitas? ¿Cuál es tu presupuesto? En Decide, te ayudamos a clarificar estas preguntas con una asesoría inicial sin compromiso.</p><h3>La Búsqueda y Elección</h3><p>Una vez que tenemos un perfil claro, te presentamos los proyectos que mejor se adaptan a ti. Organizamos visitas guiadas, te mostramos los planos y resolvemos todas tus dudas. Queremos que te enamores no solo del departamento, sino también del edificio y su comunidad.</p><h3>El Proceso de Compra</h3><p>Cuando dices '¡Este es!', nuestro equipo te guía a través del proceso de separación y compra. Te explicamos cada cláusula del contrato y te asistimos con el trámite del crédito hipotecario, conectándote con los mejores asesores bancarios. La transparencia es clave en esta etapa.</p><h3>La Entrega de Llaves</h3><p>El día más esperado. Realizamos una inspección final contigo para asegurar que cada detalle esté perfecto. Y luego, ¡las llaves son tuyas! Pero nuestra relación no termina aquí; nuestro servicio post-venta está siempre disponible para ayudarte.</p>"
+    },
+    { 
+        "id": "2", 
+        "title": "¿Crédito Hipotecario? Lo que debes saber", 
+        "summary": "Despejamos las dudas más comunes sobre los créditos hipotecarios para que tomes la mejor decisión.", 
+        "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+        "content": "<h3>¿Qué es un Crédito Hipotecario?</h3><p>Es un préstamo a largo plazo que una entidad financiera te otorga para la compra de un inmueble. La propiedad queda como garantía del pago. Es la herramienta más común para adquirir una vivienda.</p><h3>Requisitos Comunes</h3><p>Aunque varían entre bancos, generalmente necesitas: un buen historial crediticio, demostrar ingresos sostenibles (boletas de pago, recibos por honorarios), y tener entre 21 y 65 años. La cuota inicial suele ser entre el 10% y 20% del valor del inmueble.</p><h3>Tasa Fija vs. Tasa Variable</h3><p>La <strong>tasa fija</strong> no cambia durante todo el plazo del crédito, dándote cuotas mensuales predecibles. La <strong>tasa variable</strong> se ajusta periódicamente según las condiciones del mercado, lo que puede ser beneficioso si las tasas bajan, pero también riesgoso. Analiza tu perfil de riesgo antes de decidir.</p><h3>Consejos Finales</h3><p>Compara ofertas de diferentes bancos. No te fijes solo en la tasa de interés, sino también en el Costo Efectivo Anual (CEA), que incluye comisiones y seguros. En Decide, te asesoramos para que encuentres la mejor opción de financiamiento para ti.</p>"
+    },
+    { 
+        "id": "3", 
+        "title": "Invirtiendo en Ladrillos: ¿Por qué es una buena idea?", 
+        "summary": "Descubre por qué el sector inmobiliario sigue siendo una de las inversiones más seguras y rentables.", 
+        "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+        "content": "<h3>Seguridad y Estabilidad</h3><p>A diferencia de las acciones o las criptomonedas, el mercado inmobiliario es menos volátil. Los inmuebles son activos tangibles que tienden a apreciarse con el tiempo, protegiendo tu capital contra la inflación.</p><h3>Generación de Ingresos Pasivos</h3><p>Comprar una propiedad para alquilarla te proporciona un flujo de ingresos mensuales constante. Con una buena gestión, este ingreso puede cubrir la hipoteca, los gastos de mantenimiento y aun así dejarte una ganancia.</p><h3>Beneficios Fiscales</h3><p>En muchos países, los propietarios de inmuebles pueden deducir gastos como los intereses de la hipoteca, impuestos prediales y costos de mantenimiento, lo que reduce su carga tributaria.</p><h3>Construcción de Patrimonio</h3><p>Cada pago de la hipoteca aumenta tu capital en la propiedad. A largo plazo, te conviertes en dueño de un activo valioso que puedes vender, heredar o usar como garantía para otras inversiones. Invertir en bienes raíces es una de las formas más sólidas de construir un patrimonio duradero para ti y tu familia.</p>"
+    }
+]

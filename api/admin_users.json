@@ -1,0 +1,35 @@
+
+[
+    {
+      "id": "USR001",
+      "name": "Carlos Valdivia",
+      "email": "cliente@decide.pe",
+      "project": "Residencial Solaris",
+      "registrationDate": "2024-03-15",
+      "status": "Activo"
+    },
+    {
+      "id": "USR002",
+      "name": "Maria Rodriguez",
+      "email": "maria.r@example.com",
+      "project": "Condominio La Arboleda",
+      "registrationDate": "2024-04-22",
+      "status": "Activo"
+    },
+    {
+      "id": "USR003",
+      "name": "Juan Perez",
+      "email": "juan.perez@example.com",
+      "project": "Las Orquídeas",
+      "registrationDate": "2024-05-01",
+      "status": "Inactivo"
+    },
+    {
+      "id": "USR004",
+      "name": "Ana García",
+      "email": "ana.garcia@example.com",
+      "project": "Residencial Solaris",
+      "registrationDate": "2024-06-10",
+      "status": "Activo"
+    }
+]

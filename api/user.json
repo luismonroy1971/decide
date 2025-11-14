@@ -1,0 +1,26 @@
+
+{
+  "email": "cliente@decide.pe",
+  "password": "Lm@03051971",
+  "role": "client",
+  "profile": {
+    "name": "Carlos Valdivia",
+    "dni": "12345678",
+    "phone": "+51 987 654 321",
+    "project": "Residencial Solaris",
+    "unit": "Departamento 1204"
+  },
+  "payments": [
+    { "id": "P001", "concept": "Cuota Inicial", "dueDate": "2024-05-15", "amount": 50000, "status": "Pagado" },
+    { "id": "P002", "concept": "Cuota #1", "dueDate": "2024-06-15", "amount": 1500, "status": "Pagado" },
+    { "id": "P003", "concept": "Cuota #2", "dueDate": "2024-07-15", "amount": 1500, "status": "Pendiente" },
+    { "id": "P004", "concept": "Cuota #3", "dueDate": "2024-08-15", "amount": 1500, "status": "Próximo" },
+    { "id": "P005", "concept": "Cuota #4", "dueDate": "2024-09-15", "amount": 1500, "status": "Próximo" }
+  ],
+  "documents": [
+    { "id": "D001", "name": "Contrato_CompraVenta_Solaris_1204.pdf", "url": "#" },
+    { "id": "D002", "name": "Planos_Departamento_1204.pdf", "url": "#" },
+    { "id": "D003", "name": "Reglamento_Interno_Residencial_Solaris.pdf", "url": "#" },
+    { "id": "D004", "name": "Garantia_Acabados.pdf", "url": "#" }
+  ]
+}

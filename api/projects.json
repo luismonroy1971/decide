@@ -1,0 +1,48 @@
+
+[
+  {
+    "id": "proyecto-solaris",
+    "name": "Residencial Solaris",
+    "location": "Miraflores, Lima",
+    "price": "Desde S/ 450,000",
+    "description": "Modernos departamentos de 2 y 3 dormitorios con acabados de lujo y vista al mar.",
+    "longDescription": "Residencial Solaris redefine la vida urbana con su diseño vanguardista y ubicación privilegiada en el corazón de Miraflores. Cada departamento ha sido meticulosamente diseñado para maximizar el espacio y la luz natural, ofreciendo una experiencia de vida inigualable. Disfruta de nuestras áreas comunes que incluyen piscina, gimnasio y zona de coworking.",
+    "benefits": ["Piscina con vista panorámica", "Gimnasio completamente equipado", "Área de Coworking", "Lobby de doble altura", "Seguridad 24/7"],
+    "gallery": [
+      "https://picsum.photos/seed/solaris1/1200/800",
+      "https://picsum.photos/seed/solaris2/1200/800",
+      "https://picsum.photos/seed/solaris3/1200/800",
+      "https://picsum.photos/seed/solaris4/1200/800"
+    ],
+    "mainImage": "https://picsum.photos/seed/solaris-main/800/600"
+  },
+  {
+    "id": "proyecto-arboleda",
+    "name": "Condominio La Arboleda",
+    "location": "Santiago de Surco, Lima",
+    "price": "Desde S/ 380,000",
+    "description": "Vive rodeado de naturaleza en nuestros exclusivos departamentos con amplios jardines.",
+    "longDescription": "Condominio La Arboleda es un oasis en medio de la ciudad. Diseñado para familias que buscan tranquilidad y contacto con la naturaleza sin sacrificar las comodidades de la vida moderna. Nuestros departamentos cuentan con amplias terrazas y acceso a más de 2,000 m² de áreas verdes, juegos para niños y una casa club.",
+    "benefits": ["Amplias áreas verdes", "Casa Club con SUM", "Juegos para niños", "Canchas deportivas", "Cercanía a colegios y centros comerciales"],
+    "gallery": [
+      "https://picsum.photos/seed/arboleda1/1200/800",
+      "https://picsum.photos/seed/arboleda2/1200/800",
+      "https://picsum.photos/seed/arboleda3/1200/800"
+    ],
+    "mainImage": "https://picsum.photos/seed/arboleda-main/800/600"
+  },
+  {
+    "id": "proyecto-orquideas",
+    "name": "Las Orquídeas",
+    "location": "San Isidro, Lima",
+    "price": "Desde S/ 620,000",
+    "description": "Exclusividad y confort en el distrito más cotizado de Lima. Unidades limitadas.",
+    "longDescription": "Las Orquídeas ofrece un estilo de vida sofisticado y exclusivo en San Isidro. Con solo 20 departamentos, garantizamos privacidad y un ambiente selecto. Los acabados son de primera calidad, con mármol en baños y cocinas, y pisos de madera estructurada. La ubicación es inmejorable, cerca a parques, restaurantes y el centro financiero.",
+    "benefits": ["Ubicación premium", "Acabados de lujo", "Pocas unidades para mayor privacidad", "Tecnología Smart Home", "Estacionamiento para visitas"],
+    "gallery": [
+      "https://picsum.photos/seed/orquideas1/1200/800",
+      "https://picsum.photos/seed/orquideas2/1200/800"
+    ],
+    "mainImage": "https://picsum.photos/seed/orquideas-main/800/600"
+  }
+]
