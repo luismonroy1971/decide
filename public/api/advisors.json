@@ -1,0 +1,5 @@
+[
+  { "id": "1", "name": "Ana Gutiérrez", "title": "Asesora Senior", "imageUrl": "https://picsum.photos/seed/advisor1/200/200" },
+  { "id": "2", "name": "Carlos Valdivia", "title": "Jefe de Ventas", "imageUrl": "https://picsum.photos/seed/advisor2/200/200" },
+  { "id": "3", "name": "Sofia Montenegro", "title": "Asesora Inmobiliaria", "imageUrl": "https://picsum.photos/seed/advisor3/200/200" }
+]

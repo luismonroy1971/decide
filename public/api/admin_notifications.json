@@ -1,0 +1,30 @@
+[
+    {
+      "id": "N001",
+      "type": "Nuevo Mensaje",
+      "content": "Has recibido un nuevo mensaje de contacto de Sofia Montenegro.",
+      "date": "2024-07-28T10:30:00Z",
+      "isRead": false
+    },
+    {
+      "id": "N002",
+      "type": "Pago Recibido",
+      "content": "Carlos Valdivia ha completado el pago de la Cuota #2.",
+      "date": "2024-07-27T15:00:00Z",
+      "isRead": false
+    },
+    {
+      "id": "N003",
+      "type": "Nuevo Usuario",
+      "content": "Ana García se ha registrado en el portal de clientes.",
+      "date": "2024-07-26T09:15:00Z",
+      "isRead": true
+    },
+    {
+      "id": "N004",
+      "type": "Nuevo Mensaje",
+      "content": "Solicitud de cotización para el proyecto Las Orquídeas.",
+      "date": "2024-07-25T18:45:00Z",
+      "isRead": true
+    }
+]

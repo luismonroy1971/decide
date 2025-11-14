@@ -1,0 +1,6 @@
+[
+    { "id": "1", "title": "Refiere y Gana", "description": "Gana comisiones y premios por cada amigo que compre con nosotros.", "icon": "Users" },
+    { "id": "2", "title": "Financiamiento Directo", "description": "Te ayudamos a financiar tu cuota inicial con las mejores tasas.", "icon": "DollarSign" },
+    { "id": "3", "title": "Acompañamiento Social", "description": "Un equipo dedicado a ayudarte en cada paso del proceso de compra.", "icon": "Heart" },
+    { "id": "4", "title": "Club Decide", "description": "Accede a sorteos, viajes y giftcards exclusivas para nuestros clientes.", "icon": "Star" }
+]
