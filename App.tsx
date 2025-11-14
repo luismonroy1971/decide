@@ -107,6 +107,9 @@ const App: React.FC = () => {
             if (userData) {
                 setUser(userData);
                 setIsLoggedIn(true);
+                if (userData.role === 'admin') {
+                    setCurrentView('intranet');
+                }
                 // No need to set view here, renderContent will handle it based on role
                 window.scrollTo(0,0);
             } else {
@@ -127,7 +130,7 @@ const App: React.FC = () => {
 
     const renderContent = () => {
         if (isLoggedIn && user) {
-            if (user.role === 'admin') {
+            if (user.role === 'admin' && currentView !== 'home') {
                 return <AdminPanel 
                     user={user} 
                     onLogout={handleLogout} 

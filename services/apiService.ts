@@ -9,13 +9,31 @@ const fetchJson = async <T>(url: string): Promise<T> => {
     return response.json();
 };
 
-export const getProjects = (): Promise<Project[]> => fetchJson<Project[]>('/api/projects.json');
-export const getAdvisors = (): Promise<Advisor[]> => fetchJson<Advisor[]>('/api/advisors.json');
-export const getBenefits = (): Promise<Benefit[]> => fetchJson<Benefit[]>('/api/benefits.json');
-export const getBlogPosts = (): Promise<BlogPost[]> => fetchJson<BlogPost[]>('/api/blogPosts.json');
-export const getLegalContent = (): Promise<LegalContent> => fetchJson<LegalContent>('/api/legal.json');
-export const getAdminUsers = (): Promise<AdminUser[]> => fetchJson<AdminUser[]>('/api/admin_users.json');
-export const getAdminNotifications = (): Promise<AdminNotification[]> => fetchJson<AdminNotification[]>('/api/admin_notifications.json');
+const getOverride = <T>(url: string): T | null => {
+    if (typeof window === 'undefined') return null;
+    const key = `cms:${url}`;
+    const raw = window.localStorage.getItem(key);
+    if (!raw) return null;
+    try {
+        return JSON.parse(raw) as T;
+    } catch {
+        return null;
+    }
+};
+
+const getOrFetch = async <T>(url: string): Promise<T> => {
+    const override = getOverride<T>(url);
+    if (override) return override;
+    return fetchJson<T>(url);
+};
+
+export const getProjects = (): Promise<Project[]> => getOrFetch<Project[]>('/api/projects.json');
+export const getAdvisors = (): Promise<Advisor[]> => getOrFetch<Advisor[]>('/api/advisors.json');
+export const getBenefits = (): Promise<Benefit[]> => getOrFetch<Benefit[]>('/api/benefits.json');
+export const getBlogPosts = (): Promise<BlogPost[]> => getOrFetch<BlogPost[]>('/api/blogPosts.json');
+export const getLegalContent = (): Promise<LegalContent> => getOrFetch<LegalContent>('/api/legal.json');
+export const getAdminUsers = (): Promise<AdminUser[]> => getOrFetch<AdminUser[]>('/api/admin_users.json');
+export const getAdminNotifications = (): Promise<AdminNotification[]> => getOrFetch<AdminNotification[]>('/api/admin_notifications.json');
 
 
 export const loginUser = async (email: string, pass: string): Promise<User | null> => {
